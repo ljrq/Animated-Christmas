@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Animated Christmas</title>
+	<meta name="author" content="Luis Ramos">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="icon" type="image/png" href="img/favicon.png">
+</head>
+<body>
+	<section class="section">
+		<div class="box">
+			<button class="circle">
+				<h2>Merry<br>Christmas</h2>
+			</button>
+		</div>
+	</section>
+
+
+	<script type="text/javascript">
+		function bubbles(){
+			let count = 200;
+			let section =  document.querySelector('section');
+			let i = 0;
+			while (i < count){
+				let bubble  = document.createElement('i'); 
+				let x = Math.floor(Math.random() * window.innerWidth);
+				let y = Math.floor(Math.random() * window.innerHeight);
+
+				let size = Math.random() * 10;
+				bubble.style.left = x+'px';
+				bubble.style.top = y+'px';
+				bubble.style.width = 1+size+'px';
+				bubble.style.height = 1+size+'px';
+
+				bubble.style.animationDuration = 5+size+'s';
+				bubble.style.animationDelay = +size+'s';
+
+				section.appendChild(bubble);
+				i++
+			}
+		}
+		bubbles()
+		
+	</script>
+
+	<script type="text/javascript" src="app.js"></script>
+	
+</body>
+</html>
